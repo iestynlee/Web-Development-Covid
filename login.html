@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Page</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+input[type=text], input[type=password]{
+	width: 25%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid; 
+	text-align: center;
+	font-family: Times New Roman;
+	font-size: 24;
+}
+
+input[type=reset], input[type=submit]{
+	width:13.75%;
+	border-radius: 4px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid; 
+	text-align: center;
+	background-color: white;
+	font-family: Times New Roman;
+	font-size: 24;
+}
+
+input[type=button]{
+	width: 27.75%;
+	border-radius: 4px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid; 
+	text-align: center;
+	font-family: Times New Roman;
+	background-color: white;
+	font-size: 24;
+}
+
+</style>
+</head>
+<body>
+<header>
+	<h1><b>COVID - 19 Contact Tracing</b></h1>
+</header>
+<div id="container">
+<?php include 'login.php';?>
+<form action="./login.php" method="GET">
+	<br>
+	<div id="bg">
+	<input type="text" placeholder="Username" name="username"><br>
+	<input type="password" placeholder="Password" name="password"><br>
+	<br>
+	<input type="submit" value="Login">
+	<input type="reset" value="Cancel"><br>
+	<input type="button" value="Register" onclick="location.href='registration.html'">
+	</div>
+</form>
+</div>
+</body>
+</html>

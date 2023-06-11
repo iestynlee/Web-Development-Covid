@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Page</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+body {
+	margin: 0;
+	height: 100%;
+	overflow-x:hidden;
+}
+
+input[type=text], input[type=password]{
+	width: 25%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid; 
+	text-align: center;
+	font-family: Times New Roman;
+	font-size: 24;
+}
+
+input[type=submit]{
+	width: 27.75%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid; 
+	border-radius: 4px;
+	text-align: center;
+	font-family: Times New Roman;
+	font-size: 24;
+	background-color: white;
+}
+
+</style>
+</head>
+<body>
+<header>
+	<h1><b>COVID - 19 Contact Tracing</b></h1>
+</header>
+<?php include 'register.php';?>
+<div id="container">
+<form action="./register.php" method="POST">
+	<br>
+	<input type="text" placeholder="Name" name="name"><br>
+	<input type="text" placeholder="Surname" name="surname"><br>
+	<input type="text" placeholder="Username" name="username"><br>
+	<input type="password" placeholder="Password" name="password"><br><br>
+	<input type="submit" value="Register">
+</form>
+</div>
+</body>
+</html>

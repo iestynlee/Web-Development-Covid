@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Visit</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+input[type=date], input[type=time], input[type=number]{
+	width: 25%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid; 
+	text-align: center;
+	background-color: white;
+	font-family: Times New Roman;
+	font-size: 24;
+}
+
+input[type=submit],[type=reset]{
+	width: 27.75%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid; 
+	border-radius: 4px;
+	background-color: white;
+	text-align: center;
+	font-family: Times New Roman;
+	font-size: 24;
+}
+
+.bottom{
+	margin-top: 300px;
+}
+
+form{
+	text-align: left;
+}
+</style>
+
+</head>
+<body>
+<header>
+	<h1><b>COVID - 19 Contact Tracing</b></h1>
+</header>
+
+<div class="sidenav">
+	<a href="home.html">Home</a>
+	<a href="overview.html">Overview</a>
+	<a class="active" href="addvisit.html">Add Visit</a>
+	<a href="report.html">Report</a>
+	<a href="settings.html">Settings</a>
+	<a class="bottom" href="logout.php">Logout</a>
+</div>
+<?php include 'logout.php';?>
+<div class="main">
+<h2><center>Add Visit</center></h2>
+<hr>
+<img class="map" src=img/exeter.jpg></img>
+<form action="./addvisit.php" method="POST">
+	<input type="date" placeholder="Date"><br>
+	<input type="time" placeholder="Time"><br>
+	<input type="number" placeholder="Duration"><br>
+	<div class="bottom">
+	<input type="submit" value="Add"><br>
+	<input type="reset" value="Cancel">
+	</div>
+</form>
+</div>
+
+</body>
+</html>

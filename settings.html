@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Settings</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<style>
+input[type=text]{
+	width: 25%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid; 
+	text-align: center;
+	font-family: Times New Roman;
+	font-size: 24;
+}
+
+input[type=submit]{
+	width: 25%;
+	padding: 12px 50px;
+	margin: 8px 0;
+	border: 1px solid;
+	display: inline-block;
+	text-align: left;
+	border-radius: 4px;
+	font-family: Times New Roman;
+	background-color: white;
+	font-size: 24;
+}
+
+input[type=reset]{
+	width: 12.5%;
+	padding: 12px 50px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid; 
+	text-align: center;
+	border-radius: 4px;
+	background-color: white;
+	font-family: Times New Roman;
+	font-size: 24;
+}
+
+.left-btn{
+	float: left;
+}
+
+.right-btn{
+	float: right;
+}
+</style>
+<body>
+<header>
+	<h1><b>COVID - 19 Contact Tracing</b></h1>
+</header>
+<?php include 'logout.php';?>
+<div class="sidenav">
+	<a href="home.html">Home</a>
+	<a href="overview.html">Overview</a>
+	<a href="addvisit.html">Add Visit</a>
+	<a href="report.html">Report</a>
+	<a class="active" href="settings.html">Settings</a>
+	<a class="bottom" href="logout.php">Logout</a>
+</div>
+
+<div class="main">
+<h2><center>Alert Settings</center></h2>
+<hr>
+<center>Here you may change the alert distance and the time span for which the contact tracing will be performed.</center>
+<?php include 'settings.php';?>
+<form action="./settings.php" method="POST">
+	window <select id="weeks" name="weeks">
+		<option>1 Week</option>
+		<option>2 Weeks</option>
+		<option>3 Weeks</option>
+		<option>4 Weeks</option>
+	</select><br>
+	distance <input type="text" placeholder="distance" name="distance"><br>
+	<div class="left-btn">
+	<input type="submit" value="Report">
+	</div>
+	<div class="right-btn">
+	<input type="reset" value="Cancel">
+	</div>
+</form>
+</div>
+
+</body>
+</html>
